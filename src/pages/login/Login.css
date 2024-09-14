@@ -1,0 +1,100 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 350px;
+    background-color: rgba(255, 255, 255, 0,15);
+    backdrop-filter:  blur(30px);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 19px;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 25px;
+    color: var(--cor-principal);
+}
+
+.container .input-field {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px auto;
+}
+
+.input-field input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #741919;
+    padding: 20px 45px;
+}
+
+.input-field input::placeholder {
+    color: var(--cor-principal);
+}
+
+.input-field .icon {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: var(--cor-principal);
+}
+
+.container .recall-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.recall-forget label {
+    color: aliceblue;
+}
+
+.recall-forget input {
+    margin-right: 5px;
+}
+
+.recall-forget a, .signup-link p a {
+    color: var(--cor-principal);
+    text-decoration: none;
+}
+
+.recall-forget a:hover, .signup-link p a {
+     text-decoration: underline;
+}
+
+.container button {
+    width: 100%;
+    height: 35px;
+    background-color: #f6fe86;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0,1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: none;
+    margin-top: 20px;
+}
+
+.container .signup-link {
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+
+

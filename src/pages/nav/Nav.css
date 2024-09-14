@@ -1,0 +1,40 @@
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Espaça os itens à esquerda e à direita */
+    align-items: center; /* Centraliza os itens verticalmente */
+    position: sticky; /* Faz a navbar "grudar" ao atingir o topo */
+    top: 0; /* Define o topo como ponto de "grudagem" */
+  }
+  
+  .navbar-left, .navbar-right {
+    display: flex;
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+  }
+  
+  .navbar-link:hover {
+    color: #ddd;
+  }
+  
+  .navbar-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .navbar-button:hover {
+    background-color: #777;
+  }
+  
