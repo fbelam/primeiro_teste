@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from "./pages/login/Login";
 import Register from './pages/Cadastro/Register';
 import Feed from './pages/feed/index';
-import Home from './pages/Home/index';
+import Home from './pages/Home/home';
 
 function Nav() {
    return(

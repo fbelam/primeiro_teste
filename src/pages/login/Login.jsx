@@ -4,39 +4,19 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importar o hook de navegação
 
 
-const login = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: ''
-  });
-
-  const [message, setMessage] = useState('');
-  const navigate = useNavigate(); // Definir o hook de navegação
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Validação simples: Email e senha hardcoded
-    const validUser = {
-      email: 'admin@admin.com',
-      password: 'admin'
-    };
-    if (formData.email === validUser.email && formData.password === validUser.password) {
-        setErrorMessage('');
-        navigate('/home'); // Redireciona para outra página (exemplo de dashboard)
-      } else {
-        setErrorMessage('Credenciais inválidas. Por favor, tente novamente.');
-      }
+async function pegarDadosDeAPI() {
+  try {
+      let resposta = await fetch('https://jsonplaceholder.typicode.com/todos/1'); // Faz uma requisição a uma API
+      let dados = await resposta.json();  // Espera os dados serem convertidos para JSON
+      console.log(dados);  // Exibe os dados da resposta da API
+  } catch (erro) {
+      console.error("Erro ao buscar dados:", erro);  // Trate os erros que podem ocorrer
+  }
 }
 
+pegarDadosDeAPI();
+
+function login () {
   return (
     <div className="register-container">
       <div className="image-section">
